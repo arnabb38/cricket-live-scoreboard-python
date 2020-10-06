@@ -3,8 +3,9 @@ import json
 
 c = Cricbuzz()
 
-matches = c.matches
+matches = c.matches()
 
-decode = json.dumps(matches)
+# for match in matches:
+#     print(match)
 
-# print () #for pretty prinitng
+print (json.dumps(matches,indent=4))
