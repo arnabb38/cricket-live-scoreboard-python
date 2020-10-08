@@ -11,7 +11,6 @@ matches = c.matches()
 # print (json.dumps(matches,indent=4)) # 30415
 
 # Fetch scorecard of a match
-
 def scorecard(mid):
     c = Cricbuzz()
     scard = c.scorecard(mid)
@@ -19,6 +18,8 @@ def scorecard(mid):
 
 # scorecard("30415")
 
+
+# Fetch match info of a match
 def match_info(mid):
     # c = Cricbuzz()
     minfo = c.matchinfo(mid)
@@ -28,16 +29,18 @@ def match_info(mid):
 
 
 # Fetching the live score of a match
-
 def live_score(mid):
     c = Cricbuzz()
     lscore = c.livescore(mid)
     print(json.dumps(lscore, indent=4, sort_keys=True))
 
+# live_score("30415")
+
 
 # Fetch commentary of the match
-
 def commentary(mid):
     c = Cricbuzz()
     comm = c.commentary(mid)
     print(json.dumps(comm, indent=4, sort_keys=True))
+
+# commentary("30415")
